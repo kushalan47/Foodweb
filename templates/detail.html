@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="background-color: #f5ebd0;">
+    <div class="row">
+        <div class="col-md-8">
+           
+            <div class="container">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="{{ food.image.url }}" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    
+        </div>
+    
+        <div class="col-md-4 pl-0">
+            <div class="pt-4">
+                <div class="container">
+                   <div class="jumbotron p-3">
+                    <h1>{{ food.title }}</h1>
+                    <h4>Description - </h4>
+                    <h5><p>{{ food.desc }}</p></h5>
+                   </div>
+                   <div class="jumbotron p-3">
+                    <h5>Add by {{ food.author }}</h5>
+                    <h5>Published on </h5>
+                    <h5>{{ food.publish }}</h5>
+                   </div>
+                </div>
+            </div>
+
+
+        </div>
+    
+    </div>
+</div>
+
+
+{% endblock body %}
+    
